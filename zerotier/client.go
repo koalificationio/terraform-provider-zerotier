@@ -169,6 +169,7 @@ func SmallestCIDR(from net.IP, to net.IP) string {
 
 func (s *ZeroTierClient) doRequest(reqName string, req *http.Request) ([]byte, error) {
 	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", s.ApiKey))
+	req.Header.Add("X-ZT1-Auth", s.ApiKey)
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
@@ -190,6 +191,7 @@ func (s *ZeroTierClient) doRequest(reqName string, req *http.Request) ([]byte, e
 
 func (s *ZeroTierClient) headRequest(req *http.Request) (*http.Response, error) {
 	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", s.ApiKey))
+	req.Header.Add("X-ZT1-Auth", s.ApiKey)
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {

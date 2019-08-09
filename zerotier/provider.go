@@ -41,7 +41,7 @@ func Provider() terraform.ResourceProvider {
 			"api_key": &schema.Schema{
 				Type:        schema.TypeString,
 				Required:    true,
-				DefaultFunc: schema.EnvDefaultFunc("ZEROTIER_API_KEY", nil),
+				DefaultFunc: schema.EnvDefaultFunc("ZEROTIER_API_KEY", ""),
 			},
 			"controller_url": &schema.Schema{
 				Type:         schema.TypeString,

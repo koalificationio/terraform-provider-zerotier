@@ -7,7 +7,7 @@ networks and members through Terraform.
 
 ## WARNING
 
-Current version doesn't work with custom controllers because of API differences, so o not be fooled.
+Despite the ability to change the API endpoint, current version doesn't work with custom controllers because of API differences, so do not be fooled
 
 ## Building and Installing
 

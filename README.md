@@ -5,6 +5,10 @@
 This lets you create, modify and destroy [ZeroTier](https://zerotier.com)
 networks and members through Terraform.
 
+## WARNING
+
+Despite the ability to change the API endpoint, current version doesn't work with custom controllers because of API differences, so do not be fooled
+
 ## Building and Installing
 
 Since this isn't maintained by Hashicorp, you have to install it manually. There
